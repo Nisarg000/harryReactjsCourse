@@ -1,10 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export default function Navbar() {
+
+export default function Navbar(props) {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-        <a className="navbar-brand" href="/">TextUtils</a>
+        <a className="navbar-brand" href="/">{props.title}</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -14,7 +16,7 @@ export default function Navbar() {
               <a className="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">About</a>
+              <a className="nav-link" href="/">{props.aboutText}</a>
             </li>
           </ul>
           <form className="d-flex">
@@ -25,4 +27,10 @@ export default function Navbar() {
       </div>
     </nav>
     )
+}
+
+Navbar.propTypes = {title: PropTypes.string.isRequired, aboutText: PropTypes.string.isRequired} // this is used to check the type of the props and would throw an error if the type is not correct 
+Navbar.defaultProps = {
+    title: "Set title here",
+    aboutText: "about text of default type"
 }
