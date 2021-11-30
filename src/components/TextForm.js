@@ -27,7 +27,7 @@ export default function TextForm(props) {
         <div className="container">
             <h1>{props.heading} </h1>
             <div class="mb-3">
-                <textarea class="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8"></textarea>
+                <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8"></textarea>
             </div>
             <button className="btn btn-primary" onClick={handleUpClick} >Convert to uppercase</button>
             <button className="btn btn-primary mx-4" onClick={handleLoClick} >Convert to Lowercase</button>
@@ -35,8 +35,8 @@ export default function TextForm(props) {
         </div>
         <div className="container my-3">
             <h1>Your text summary</h1>
-            <p>{text.split(" ").length} words and {text.length} characters</p>{/* //count words and characters */}
-            <p> {0.008 * text.split(" ").length} Minutes required to read you texts</p> {/* Count minutes to read */}
+            <p>{text.split(/\s+/).length} words and {text.length} characters</p>{/* //count words and characters */}
+            <p> {0.008 * text.split(/\s+/).length} Minutes required to read you texts</p> {/* Count minutes to read */}
             <h2>Preview</h2> {/*  */}
             <p>{text}</p>
         </div>
