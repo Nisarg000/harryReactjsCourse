@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        "use strict"; //built in js command
+        let a = 34;
+        console.log(a);
+
+        function hello() {
+            console.log("Hello");
+        }
+        hello();
+        let obj = //this is basically like dictionaries
+        {
+            name: "Harry",
+            age: 34,
+            func: function printNumber(number) {
+                console.log(number);
+            }
+        }
+        console.log(obj.func(69));
+        
+        let arr = [69,420,6];
+        // arr.forEach(Element =>
+        // {
+        // });
+        
+        // function printNumber(number) {
+        //         console.log("your number is: " + this);
+        //     }
+        // printNumber(420);
+            
+        let myobj = {
+        myfunc: (number)=> {
+                console.log("your number is: " + this);
+            }
+        }
+        myobj.myfunc(420);
+
+        document.addEventListener("click", function click()
+        {
+            console.log("Clicked");
+            alert("This shit works");
+        });
+    </script>
+</head>
+<body>
+    <h1>Lets see how this works</h1>
+    
+</body>
+</html>
