@@ -35,7 +35,7 @@ export default function TextForm(props) {
         </div>
         <div className="container my-3">
             <h1>Your text summary</h1>
-            <p>{text.split(/\s+/).length} words and {text.length} characters</p>{/* //count words and characters */}
+            <p>{text.split(/\s+/).length} words and {text.length} characters</p>{/* //count words and characters and .split(/\s+/) splits the input according to one or more space characters */}
             <p> {0.008 * text.split(/\s+/).length} Minutes required to read you texts</p> {/* Count minutes to read */}
             <h2>Preview</h2> {/*  */}
             <p>{text}</p>
